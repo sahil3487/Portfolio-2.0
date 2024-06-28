@@ -3,7 +3,7 @@ import avatarImage from "../public/avatar.png"; // Make sure this path is correc
 
 const Avatar = () => {
   return (
-    <div className=" hidden xl:flex xl:max-w-none justify-center items-center mr-[250px] ">
+    <div className=" hidden xl:flex xl:max-w-none justify-center items-center mr-[230px] ">
       <Image
         src={avatarImage}
         width={450} // Adjusted width as per your modified dimensions
