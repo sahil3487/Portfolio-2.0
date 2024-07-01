@@ -20,7 +20,7 @@ const aboutData = [
     title: "skills",
     info: [
       {
-        title: "Web Development :",
+        title: "Web Development:",
         icons: [
           <FaHtml5 key="html5" />,
           <FaCss3 key="css3" />,
@@ -32,7 +32,7 @@ const aboutData = [
         ],
       },
       {
-        title: "UI/UX Design : ",
+        title: "UI/UX Design:",
         icons: [
           <FaFigma key="figma" />,
           <SiAdobexd key="adobexd" />,
@@ -115,22 +115,22 @@ const About = () => {
         initial="hidden"
         animate="show"
         exit="hidden"
-        className="hidden xl:flex absolute bottom-0 -left-[170px]"
+        className="hidden xl:flex absolute -bottom-1 -left-[100px]"
       >
         <Avatar />
       </motion.div>
 
-      <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
+      <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-10">
         {/* Text Section */}
-        <div className="flex-1 flex flex-col justify-center">
+        <div className="flex flex-1  flex-col justify-center xl:w-3/5 xl:pl-[30px] lg:pl-[10px]">
           <motion.h2
             variants={fadeIn("right", 0.2)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h2"
+            className="h2 text-white"
           >
-            Captivating <span className="text-accent">stories</span> birth
+            Captivating <span className="text-accent">Stories</span> Birth
             magnificent design
           </motion.h2>
           <motion.p
@@ -138,71 +138,68 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
+            className="max-w-[500px] mx-auto xl:mx-0 mb-5 xl:mb-10 px-3 xl:px-1 text-white/70"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Perspiciatis libero exercitationem quas eaque porro, ex cupiditate
-            sint dolorum necessitatibus fugiat aspernatur error minus iure.
-            Sapiente harum dignissimos dicta odit beatae.
+            Experienced web designer specializing in frontend development and UI/UX design. Dedicated to crafting responsive, visually appealing websites with a focus on user experience. Proficient in HTML, CSS, JavaScript, React, and passionate about creating engaging digital experiences.
           </motion.p>
-        </div>
 
-        {/* Counters Section */}
-        <div className="hidden md:flex md:max-w-none mx-auto xl:mx-0 mb-8">
-          <div className=" flex flex-1 xl:gap-x-6">
-            {/* Experience Counter */}
-            <div className="relative flex-1 after:w-[2px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
-              <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                <Counters start={0} end={10} duration={5} />+
+          {/* Counters Section */}
+          <div className="hidden md:flex md:max-w-none mx-auto xl:mx-0 mb-1 pl-8">
+            <div className="flex flex-0  xl:gap-x-10">
+              {/* Experience Counter */}
+              <div className="relative  after:w-[2px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
+                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
+                  <Counters start={10} end={2} duration={5} />+
+                </div>
+                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px] text-white/70">
+                  years of experience
+                </div>
               </div>
-              <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                years of experience
+              {/* Satisfied Clients Counter */}
+              <div className="relative  after:w-[2px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
+                <div className="text-lg xl:text-4xl font-extrabold text-accent mb-2">
+                  <Counters start={200} end={20} duration={5} />+
+                </div>
+                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px] text-white/70">
+                  satisfied clients
+                </div>
               </div>
-            </div>
-            {/* Satisfied Clients Counter */}
-            <div className="relative flex-1 after:w-[2px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
-              <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                <Counters start={0} end={210} duration={5} />+
+              {/* Completed Projects Counter */}
+              <div className="relative  after:w-[2px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
+                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
+                  <Counters start={310} end={10} duration={5} />+
+                </div>
+                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px] text-white/70">
+                  completed projects
+                </div>
               </div>
-              <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                satisfied clients
-              </div>
-            </div>
-            {/* Completed Projects Counter */}
-            <div className="relative flex-1 after:w-[2px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
-              <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                <Counters start={0} end={310} duration={5} />+
-              </div>
-              <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                completed projects
-              </div>
-            </div>
-            {/* Awards Won Counter */}
-            <div className="relative flex-1 after:w-[2px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
-              <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                <Counters start={0} end={8} duration={5} />+
-              </div>
-              <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                awards won
+              {/* Awards Won Counter */}
+              <div className="relative  after:w-[2px] after:h-full after:bg-white/10 after:absolute after:top-0 after:-right-5">
+                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
+                  <Counters start={110} end={8} duration={5} />+
+                </div>
+                <div className="text-xs uppercase tracking-[2px] leading-[1.4] max-w-[100px] text-white/70">
+                  awards won
+                </div>
               </div>
             </div>
           </div>
         </div>
 
         {/* Info Section */}
-        <motion.div
-          variants={fadeIn("left", 0.4)}
+        <div
+          variants={fadeIn("", 0.4)}
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="flex flex-col  xl:max-w-[49%] h-[480px]"
+          className="flex flex-col xl:max-w-[50%] h-[180px] justify-center xl:justify-start"
         >
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
             {aboutData.map((item, itemIndex) => (
               <div
                 key={itemIndex}
                 className={`cursor-pointer capitalize text-lg relative ${
-                  index === itemIndex ? "text-accent" : ""
+                  index === itemIndex ? "text-accent" : "text-white/70"
                 }`}
                 onClick={() => setIndex(itemIndex)}
               >
@@ -227,11 +224,13 @@ const About = () => {
                     <div className="flex gap-x-2">{infoItem.icons}</div>
                   )}
                 </div>
-                {!infoItem.icons && <p className="mt-1">{infoItem.stage}</p>}
+                {!infoItem.icons && (
+                  <p className="mt-1 text-white/70">{infoItem.stage}</p>
+                )}
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

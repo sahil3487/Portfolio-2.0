@@ -10,7 +10,7 @@ import {
 
 const Socials = () => {
   return (
-    <div className="flex flex-auto justify-center lg:justify-start gap-x-5 text-lg">
+    <div className="flex items-center justify-center lg:justify-start gap-x-5 text-lg">
       <Link
         href="https://youtube.com"
         className="hover:text-accent transition-all duration-300 transform hover:scale-110"
