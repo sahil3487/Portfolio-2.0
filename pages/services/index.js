@@ -37,8 +37,7 @@ const Services = () => {
               exit="hidden"
               className="mb-4 max-w-[400px] mx-auto lg:mx-0"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil,
-              reiciendis laborum. Officia dolores accusamus veniam quisquam
+              Creating dynamic web applications with the MERN stack. Offering custom APIs for seamless integration, optimizing performance for lightning-fast speed, designing stunning, responsive interfaces, and integrating powerful Firebase features to elevate your app's functionality. Let's innovate together!
             </motion.p>
           </div>
           {/* Slider Section */}

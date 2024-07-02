@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Counters from "react-countup";
 import { FaHtml5, FaCss3, FaJs, FaReact, FaWordpress, FaFigma, } from "react-icons/fa";
-import { SiNextdotjs, SiFramer, SiAdobexd, SiAdobephotoshop, SiNodedotjs } from "react-icons/si";
+import { SiNextdotjs, SiFramer, SiFirebase ,SiNodedotjs, SiPostman, SiRedis, SiSwagger, SiMongodb, SiMysql } from "react-icons/si";
 import Avatar from "../../components/Avatar";
 import Circles from "../../components/Circles";
 import { fadeIn } from "../../variants";
@@ -22,14 +22,18 @@ const aboutData = [
           <SiNextdotjs key="nextjs" />,
           <SiFramer key="framer" />,
           <SiNodedotjs key="Nodejs" />
+          
         ],
       },
       {
-        title: "UI/UX Design:",
+        title: "Tools / Database:",
         icons: [
-          <FaFigma key="figma" />,
-          <SiAdobexd key="adobexd" />,
-          <SiAdobephotoshop key="photoshop" />,
+          <SiSwagger key="swagger" />,
+          <SiPostman key="postman" />,
+          <SiRedis key="redis" />,
+          <SiMongodb key="mongodb" />,
+          <SiMysql key="mySql" />,
+          <SiFirebase key="firebase" />
         ],
       },
     ],
@@ -51,7 +55,7 @@ const aboutData = [
     title: "experience",
     info: [
       {
-        title: "Full-Stack Developer - Shreejan Techsure pvt-ltd",
+        title: "Full-Stack Developer - Shreejan Techsure",
         stage: "2023 - 2024",
       },
       {
@@ -106,7 +110,7 @@ const About = () => {
             exit="hidden"
             className="h2 text-white"
           >
-            Captivating <span className="text-accent">Stories</span> Birth magnificent design
+            Transformation ideas <br /> Into <span className="text-accent">Digital Reality. </span>
           </motion.h2>
           <motion.p
             variants={fadeIn("right", 0.4)}
@@ -115,10 +119,10 @@ const About = () => {
             exit="hidden"
             className="max-w-[500px] mx-auto xl:mx-0 mb-5 xl:mb-10 px-3 xl:px-1 text-white/70"
           >
-            Experienced web designer specializing in frontend development and UI/UX design. Dedicated to crafting responsive, visually appealing websites with a focus on user experience.
+            Dynamic MERN stack wizard with a flair for MongoDB, Express, React, and Node.js. Transforming visions into scalable, stunning web applications. Let's create something extraordinary together.
           </motion.p>
           {/* Counters Section */}
-          <div className="hidden md:flex md:max-w-none mx-auto xl:mx-0 mb-1 pl-8">
+          <div className="hidden md:flex md:max-w-none mx-auto xl:mx-0 mb-1 pl-5">
             <div className="flex flex-0 xl:gap-x-10">
               {/* Experience Counter */}
               <div className="relative after:w-[2px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
@@ -165,9 +169,9 @@ const About = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="flex flex-col xl:max-w-[50%] h-[180px] justify-center xl:justify-start"
+          className="flex flex-col xl:max-w-[30%] h-[300px] justify-center xl:justify-center"
         >
-          <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
+          <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-0">
             {aboutData.map((item, itemIndex) => (
               <div
                 key={itemIndex}
@@ -185,12 +189,12 @@ const About = () => {
           <div className="mt-4">
             {aboutData[index].info.map((infoItem, infoIndex) => (
               <div key={infoIndex} className="mb-4">
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center gap-x-4">
                   <h3 className="font-semibold text-lg text-white/60">
                     {infoItem.title}
                   </h3>
                   {infoItem.icons && (
-                    <div className="flex gap-x-2">{infoItem.icons}</div>
+                    <div className="flex gap-x-1">{infoItem.icons}</div>
                   )}
                 </div>
                 {!infoItem.icons && (

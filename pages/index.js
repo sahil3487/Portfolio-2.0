@@ -21,7 +21,7 @@ const Home = () => {
 
       {/* text */}
       <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
-        <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto xl:pl-0 xl:pr-16 p-5">
+        <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto xl:p-0 xl:pr-30 p-5">
           {/* title */}
           <motion.h1
             variants={fadeIn("down", 0.2)}
@@ -29,9 +29,11 @@ const Home = () => {
             animate="show"
             exit="hidden"
             className="h1"
+             
+            
           >
-            Transformation ideas <br /> Into 
-            <span className="text-accent"> Digital Reality</span>
+            Meet the MERN Maestro, <br /> Crafting Scalable
+            <span className="text-accent">  Web Marvels.</span>
           </motion.h1>
           {/* subtitle */}
           <motion.p

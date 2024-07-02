@@ -1,49 +1,3 @@
-// data
-const workSlides = {
-  slides: [
-    {
-      images: [
-        {
-          title: "title",
-          path: "/thumb1.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb2.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb3.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb4.jpg",
-        },
-      ],
-    },
-    {
-      images: [
-        {
-          title: "title",
-          path: "/thumb4.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb1.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb2.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb3.jpg",
-        },
-      ],
-    },
-  ],
-};
-
 import { BsArrowRight } from 'react-icons/bs';
 import Image from "next/image";
 // Swiper components
@@ -53,6 +7,37 @@ import { Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
+
+const workSlides = {
+  slides: [
+    {
+      images: [
+        {
+          title: "Hospital finder Mobile app",
+          path: "/thumb1.jpg",
+          githubUrl: "https://github.com/sahil3487/Hospital_finder-app.git",
+        },
+        {
+          title: "Ecommrce",
+          path: "/thumb3.jpg",
+          githubUrl: "https://github.com/sahil3487/ecommerce-website-.git",
+        },
+        {
+          title: "Project 2",
+          path: "/thumb4.jpg",
+          githubUrl: "https://github.com/sahil3487/NetFlix-Clone.git",
+        },
+        {
+          title: "Project 2",
+          path: "/thumb4.jpg",
+          githubUrl: "https://github.com/sahil3487/ChatGpt-Clone.git",
+        },
+        // Add more projects with their GitHub URLs
+      ],
+    },
+    // Add more slides if needed
+  ],
+};
 
 const WorkSlider = () => {
   return (
@@ -69,7 +54,7 @@ const WorkSlider = () => {
           <div className="grid grid-cols-2 grid-rows-1 gap-5 cursor-pointer">
             {slide.images.map((image, imageIndex) => (
               <div key={imageIndex} className="relative rounded-lg overflow-hidden flex items-center justify-center group">
-                <div className="flex items-center justify-center relative overflow-hidden group">
+                <a href={image.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center relative overflow-hidden group">
                   {/* image */}
                   <Image src={image.path} width={500} height={300} alt={image.title} />
                   <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
@@ -82,7 +67,7 @@ const WorkSlider = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
             ))}
           </div>

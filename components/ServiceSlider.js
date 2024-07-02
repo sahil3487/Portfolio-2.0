@@ -7,33 +7,23 @@ import {
   RxRocket,
   RxArrowTopRight
 } from "react-icons/rx";
-
+import {SiAndroid , SiAndroidstudio,  SiCampaignmonitor, SiNextdotjs, SiWeb3Dotjs , SiUikit } from "react-icons/si";
 // data
 const serviceData = [
   {
-    icon: <RxCrop />,
-    title: "Branding",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    icon: <SiWeb3Dotjs  />,
+    title: "Web Development",
+    description: "MERN stack, performance, stunning design for dynamic applications",
   },
   {
-    icon: <RxPencil2 />,
-    title: "Design",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    icon: <SiNextdotjs/>,
+    title: "Ui Ux Development",
+    description: "Sleek, responsive, stunning UIs tailored for dynamic web applications.",
   },
   {
-    icon: <RxDesktop />,
-    title: "Development",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    icon: <RxReader />,
-    title: "Copywriting",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    icon: <RxRocket />,
-    title: "SEO",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    icon: <SiAndroidstudio />,
+    title: " Mobile Development",
+    description: "Dynamic apps with MERN stack, seamless performance, stunning design",
   },
 ];
 
@@ -63,7 +53,7 @@ const ServiceSlider = () => {
         clickable: true,
       }}
       modules={[FreeMode, Pagination]}
-      className=" h-[240px] sm:h-[340px]"
+      className=" flex h-[240px] sm:h-[340px]"
     >
       {serviceData.map((service, index) => (
         <SwiperSlide key={index}>

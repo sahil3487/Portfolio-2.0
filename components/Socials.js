@@ -6,43 +6,39 @@ import {
   RiDribbbleLine,
   RiBehanceLine,
   RiLinkedinBoxLine,
+  RiTwitterLine
 } from "react-icons/ri";
 
 const Socials = () => {
   return (
-    <div className="flex items-center justify-center lg:justify-start gap-x-5 text-lg">
+    <div className=" flex items-center justify-center lg:justify-start gap-x-6 text-lg lg:pl-10 ">
       <Link
-        href="https://youtube.com"
+        href="https://www.youtube.com/@mr.automotive3487"
         className="hover:text-accent transition-all duration-300 transform hover:scale-110"
       >
         <RiYoutubeLine />
       </Link>
       <Link
-        href="https://facebook.com"
+        href="https://www.facebook.com/ThakurShab28/"
         className="hover:text-accent transition-all duration-300 transform hover:scale-110"
       >
         <RiFacebookBoxLine />
       </Link>
       <Link
-        href="https://instagram.com"
+        href="https://www.instagram.com/thakur._.shab/"
         className="hover:text-accent transition-all duration-300 transform hover:scale-110"
       >
         <RiInstagramLine />
       </Link>
+
       <Link
-        href="https://dribbble.com"
+        href="https://x.com/sahil3487"
         className="hover:text-accent transition-all duration-300 transform hover:scale-110"
       >
-        <RiDribbbleLine />
+        <RiTwitterLine/>
       </Link>
       <Link
-        href="https://behance.net"
-        className="hover:text-accent transition-all duration-300 transform hover:scale-110"
-      >
-        <RiBehanceLine />
-      </Link>
-      <Link
-        href="https://linkedin.com"
+        href="https://www.linkedin.com/in/sahil-singh-baghel/"
         className="hover:text-accent transition-all duration-300 transform hover:scale-110"
       >
         <RiLinkedinBoxLine />

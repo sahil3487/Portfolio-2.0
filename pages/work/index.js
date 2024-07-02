@@ -37,8 +37,9 @@ const Work = () => {
               exit="hidden"
               className="mb-4 max-w-[400px] mx-auto lg:mx-0"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil,
-              reiciendis laborum. Officia dolores accusamus veniam quisquam
+
+
+              Highlighting dynamic web applications crafted with MERN stack, emphasizing seamless performance, stunning design, and innovative functionality.
             </motion.p>
           </div>
           {/* Slider Section */}
