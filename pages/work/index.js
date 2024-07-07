@@ -20,7 +20,7 @@ const Work = () => {
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-x-9">
           {/* Text Section */}
-          <div className="text-center xl:w-[31vw] flex flex-col lg:text-left mb-4 xl:mb-0">
+          <div className="text-center  pt-[100px] xl:pt-[180px] xl:w-[31vw] flex flex-col lg:text-left mb-4 xl:mb-1">
             <motion.h2
               variants={fadeIn("up", 0.2)}
               initial="hidden"
@@ -37,9 +37,7 @@ const Work = () => {
               exit="hidden"
               className="mb-4 max-w-[400px] mx-auto lg:mx-0"
             >
-
-
-              Highlighting dynamic web applications crafted with MERN stack, emphasizing seamless performance, stunning design, and innovative functionality.
+            Highlighting dynamic web applications crafted with MERN stack, emphasizing seamless performance, stunning design, and innovative functionality.
             </motion.p>
           </div>
           {/* Slider Section */}
@@ -48,7 +46,7 @@ const Work = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="w-full xl:max-w-[65%]"
+            className="w-full xl:max-w-[57%] xl:pt-[180px]"
           >
             <WorkSlider />
           </motion.div>

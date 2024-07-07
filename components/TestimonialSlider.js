@@ -12,19 +12,19 @@ const testimonialData = [
     image: '/t-avt-1.png',
     name: 'Anne Smith',
     position: 'Web Developer',
-    message: 'Working with XYZ team has been a game-changer for me. Their expertise and dedication exceeded my expectations!',
+    message: 'Working with Webiwork team has been a game-changer for me. Their expertise and dedication exceeded my expectations!',
   },
   {
     image: '/t-avt-2.png',
     name: 'Jane Doe',
     position: 'UI/UX Designer',
-    message: 'I\'m impressed with the creativity and precision of XYZ\'s designs. They truly understand user experience.',
+    message: 'I\'m impressed with the creativity and precision of Cloudrent\'s designs. They truly understand user experience.',
   },
   {
     image: '/t-avt-3.png',
     name: 'John Doe',
     position: 'Project Manager',
-    message: 'XYZ delivered our project on time and within budget. Their professionalism and communication were outstanding.',
+    message: ' Delivered our project on time and within budget. Their professionalism and communication were outstanding.',
   },
 ];
 

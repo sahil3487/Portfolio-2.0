@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Counters from "react-countup";
-import { FaHtml5, FaCss3, FaJs, FaReact, FaWordpress, FaFigma, } from "react-icons/fa";
-import { SiNextdotjs, SiFramer, SiFirebase ,SiNodedotjs, SiPostman, SiRedis, SiSwagger, SiMongodb, SiMysql } from "react-icons/si";
+import { FaHtml5, FaCss3, FaJs, FaReact, FaWordpress, FaFigma } from "react-icons/fa";
+import { SiNextdotjs, SiFramer, SiFirebase, SiNodedotjs, SiPostman, SiRedis, SiSwagger, SiMongodb, SiMysql } from "react-icons/si";
 import Avatar from "../../components/Avatar";
 import Circles from "../../components/Circles";
 import { fadeIn } from "../../variants";
@@ -22,7 +22,6 @@ const aboutData = [
           <SiNextdotjs key="nextjs" />,
           <SiFramer key="framer" />,
           <SiNodedotjs key="Nodejs" />
-          
         ],
       },
       {
@@ -42,7 +41,7 @@ const aboutData = [
     title: "awards",
     info: [
       {
-        title: " JavaScript And Algo - FreeCodeCamp",
+        title: "JavaScript And Algo - FreeCodeCamp",
         stage: "2022 - 2022",
       },
       {
@@ -66,8 +65,6 @@ const aboutData = [
         title: "Backend Developer Intern - FunctionUp",
         stage: "2022 - 2022",
       },
-
-
     ],
   },
   {
@@ -78,7 +75,7 @@ const aboutData = [
         stage: "2022",
       },
       {
-        title: "Bachlour of Computer Application - RKDF Univercity, Bhopal",
+        title: "Bachelor of Computer Application - RKDF University, Bhopal",
         stage: "2020",
       },
     ],
@@ -96,13 +93,14 @@ const About = () => {
         initial="hidden"
         animate="show"
         exit="hidden"
-        className="hidden xl:flex absolute -bottom-1 -left-[100px]"
+        className="hidden xl:flex absolute  xl:bottom-0 -left-[150px] xl:w-[70%] xl "
       >
         <Avatar />
+
       </motion.div>
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-10">
         {/* Text Section */}
-        <div className="flex flex-1 flex-col justify-center xl:w-3/5 xl:pl-[30px] lg:pl-[10px]">
+        <div className="flex flex-1 flex-col  xl:mx-10 justify-center xl:w-3/5 xl:pl-[200px] lg:pl-[30px] lg:pt-8 pt-8">
           <motion.h2
             variants={fadeIn("right", 0.2)}
             initial="hidden"
@@ -110,19 +108,19 @@ const About = () => {
             exit="hidden"
             className="h2 text-white"
           >
-            Transformation ideas <br /> Into <span className="text-accent">Digital Reality. </span>
+            Transformation ideas Into <span className="text-accent">Digital Reality&rsquo;s</span>
           </motion.h2>
           <motion.p
             variants={fadeIn("right", 0.4)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-[500px] mx-auto xl:mx-0 mb-5 xl:mb-10 px-3 xl:px-1 text-white/70"
+            className="max-w-[500px] xl:flex mx-auto  mb-5 xl:mb-10 px-3 xl:px-1 text-white/70"
           >
-            Dynamic MERN stack wizard with a flair for MongoDB, Express, React, and Node.js. Transforming visions into scalable, stunning web applications. Let's create something extraordinary together.
+            Dynamic MERN stack wizard with a flair for MongoDB, Express, React, and Node.js. Transforming visions into scalable, stunning web applications. Let&rsquo;s create something extraordinary together.
           </motion.p>
           {/* Counters Section */}
-          <div className="hidden md:flex md:max-w-none mx-auto xl:mx-0 mb-1 pl-5">
+          <div className="hidden md:flex md:max-w-none mx-auto xl:mx-0 xl:pl-7 mb-1 pl-5">
             <div className="flex flex-0 xl:gap-x-10">
               {/* Experience Counter */}
               <div className="relative after:w-[2px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
@@ -152,11 +150,11 @@ const About = () => {
                 </div>
               </div>
               {/* Awards Won Counter */}
-              <div className="relative after:w-[2px] after:h-full after:bg-white/10 after:absolute after:top-0 after:-right-5">
+              <div className="relative after:w-[2px] after:h-full after:bg-white/10 after:absolute after:top-0 after:-right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
                   <Counters start={110} end={8} duration={5} />+
                 </div>
-                <div className="text-xs uppercase tracking-[2px] leading-[1.4] max-w-[100px] text-white/70">
+                <div className="text-xs uppercase tracking-[2px] leading-[1.2] max-w-[100px] text-white/70">
                   awards won
                 </div>
               </div>
@@ -169,9 +167,9 @@ const About = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="flex flex-col xl:max-w-[30%] h-[300px] justify-center xl:justify-center"
+          className="flex flex-col xl:max-w-[30%] h-[300px] justify-center xl:justify-center xl:mx-10  "
         >
-          <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-0">
+          <div className="flex gap-x-4 xl:gap-x-5 mx-auto xl:mx-1 mb-0">
             {aboutData.map((item, itemIndex) => (
               <div
                 key={itemIndex}
@@ -189,7 +187,7 @@ const About = () => {
           <div className="mt-4">
             {aboutData[index].info.map((infoItem, infoIndex) => (
               <div key={infoIndex} className="mb-4">
-                <div className="flex justify-between items-center gap-x-4">
+                <div className="flex justify-start items-center gap-x-2 lg:gap-y-2 ">
                   <h3 className="font-semibold text-lg text-white/60">
                     {infoItem.title}
                   </h3>

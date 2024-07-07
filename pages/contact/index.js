@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { BsArrowRight  } from "react-icons/bs";
-import { SiGmail, SiWhatsapp  } from "react-icons/si";
+import React, { useState } from "react";
+import { BsArrowRight } from "react-icons/bs";
+import { SiGmail, SiWhatsapp } from "react-icons/si";
 import { BiPhoneOutgoing } from "react-icons/bi";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../variants";
@@ -43,33 +43,65 @@ const Contact = () => {
 
   return (
     <div className="h-full bg-primary/30">
-      <div className="container mx-auto py-32 text-center xl:text-left">
+      <div className="container mx-auto py-32  text-center xl:text-left px-4">
         <div className="max-w-[700px] mx-auto">
           <motion.h2
             variants={fadeIn("up", 0.2)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h2 text-center mb-12 text-white"
+            className="h2 text-center pt-3 mb-13 text-white "
           >
             Let&apos;s <span className="text-accent">Connect...</span>
           </motion.h2>
+
+          <div className="flex flex-col lg:flex-row justify-center mt-1">
+            <div className="text-white flex gap-3 pb-2 items-center justify-center mb-2 xl:mb-3">
+              <button
+                className="btn rounded-full border border-red-600 px-6 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group relative"
+                onClick={handleEmailButtonClick}
+              >
+                <span className="group-hover:-translate-y-[120%] text-sm group-hover:opacity-0 transition-all duration-500">
+                  Email Me
+                </span>
+                <SiGmail className="absolute text-[22px] -translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300" />
+              </button>
+              <button
+                className="btn rounded-full border p-3 border-red-600 px-6 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group relative"
+                onClick={handleWhatsAppButtonClick}
+              >
+                <span className="group-hover:-translate-y-[120%] text-sm group-hover:opacity-0 transition-all duration-500">
+                  WhatsApp Me
+                </span>
+                <SiWhatsapp className="absolute text-[22px] -translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300" />
+              </button>
+              <button
+                className="btn rounded-full border p-3 border-red-600 px-6 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group relative"
+                onClick={handleCallMeButtonClick}
+              >
+                <span className="group-hover:-translate-y-[120%] text-sm group-hover:opacity-0 transition-all duration-500">
+                  Call Me
+                </span>
+                <BiPhoneOutgoing className="absolute text-[22px] -translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300" />
+              </button>
+            </div>
+          </div>
           <motion.form
             variants={fadeIn("up", 0.4)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="flex flex-col gap-6"
+            className="flex flex-col items-center lg:px-0 max-w-[500px] mx-auto"
             onSubmit={handleSubmit}
           >
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col pt-2 gap-2 mb-[20px] w-full">
               <input
                 type="text"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Your Name"
-                className="input rounded-lg px-4 py-3  bg-primary/30 text-white placeholder-gray-500 focus:outline-none focus:bg-gray-700 focus:border-accent transition duration-300"
+                className="input rounded-lg px-4 py-3 bg-primary/30 text-white placeholder-gray-500 focus:outline-none focus:bg-gray-700 focus:border-accent transition duration-300"
               />
               <input
                 type="email"
@@ -77,7 +109,7 @@ const Contact = () => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="Your Email"
-                className="input rounded-lg px-4 py-3  bg-primary/30 text-white placeholder-gray-500 focus:outline-none focus:bg-gray-700 focus:border-accent transition duration-300"
+                className="input rounded-lg px-4 py-3 bg-primary/30 text-white placeholder-gray-500 focus:outline-none focus:bg-gray-700 focus:border-accent transition duration-300"
               />
               <input
                 type="text"
@@ -85,19 +117,19 @@ const Contact = () => {
                 value={formData.subject}
                 onChange={handleChange}
                 placeholder="Subject"
-                className="input rounded-lg px-4 py-3  bg-primary/30 text-white placeholder-gray-500 focus:outline-none focus:bg-gray-700 focus:border-accent transition duration-300"
+                className="input  rounded-lg px-4 py-3 bg-primary/30 text-white placeholder-gray-500 focus:outline-none focus:bg-gray-700 focus:border-accent transition duration-300"
               />
               <textarea
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Your Message"
-                className="textarea rounded-lg px-4 py-3  bg-primary/30 text-white placeholder-gray-500 focus:outline-none focus:bg-gray-700 focus:border-accent transition duration-300"
+                className=" input xl:textarea rounded-lg px-4 py-3 bg-primary/30 text-white placeholder-gray-500 focus:outline-none focus:bg-gray-700 focus:border-accent transition duration-300"
               ></textarea>
             </div>
             <button
               type="submit"
-              className="btn rounded-full border border-white/50 max-w-[170px] px-8 mx-auto transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group relative self-center"
+              className="btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group relative mb-16 lg:mb-0"
             >
               <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
                 Let&apos;s Talk
@@ -105,38 +137,6 @@ const Contact = () => {
               <BsArrowRight className="absolute text-[22px] -translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300" />
             </button>
           </motion.form>
-          <div className="flex justify-center mt-8">
-            <div className="text-white flex gap-8 items-center">
-              <div className="text-accent text-3xl">Contact Me:</div>
-              <button
-                className="btn rounded-full border p-3 border-white/50 px-6 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group relative"
-                onClick={handleEmailButtonClick}
-              >
-                <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
-                  Email Me
-                </span>
-                <SiGmail className="absolute text-[22px] -translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300" />
-              </button>
-              <button
-                className="btn rounded-full border border-white/50 px-6 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group relative"
-                onClick={handleWhatsAppButtonClick}
-              >
-                <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
-                  WhatsApp Me
-                </span>
-                <SiWhatsapp className="absolute text-[22px] -translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300" />
-              </button>
-              <button
-                className="btn rounded-full border border-white/50 px-6 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group relative"
-                onClick={handleCallMeButtonClick}
-              >
-                <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
-                  Call Me
-                </span>
-                <BiPhoneOutgoing className="absolute text-[22px] -translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300" />
-              </button>
-            </div>
-          </div>
         </div>
       </div>
     </div>
